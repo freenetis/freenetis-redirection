@@ -1,0 +1,21 @@
+Priority: optional
+Section: web
+Pre-Depends: debconf (>= 0.5) | debconf-2.0
+Suggests: freenetis
+Architecture: all
+Maintainer: Ondrej Fibich <ondrej.fibich@gmail.com>
+Homepage: http://www.freenetis.org
+Description: FreenetIS redirection:
+ FreenetIS redirection is tool which depends on FreenetIS and it is used for 
+  restriction of traffic. Restrictions are activated in the FreenetIS
+  and they may be applicated on clouds, subnets, members or a single IP address.
+  Devices that are not registered in the FreenetIS are automatically restricted.
+  System administrators may edit messages that are displayed to restricted
+  users instead of web pages that they have requested.
+Description-cs.UTF-8: FreenetIS přesměrování:
+ FreenetIS přesměrování je nástroj, který je závyslí na FreenetISu, a je používán
+  pro omezení provozu. Omezení jsou aktivována ve FreenetISu a mohou být 
+  aplikovány na oblasti, podsítě, členy nebo jednotlivé IP adresy.
+  zařízení, které nejsou zaregistrovány ve FreenetISu jsou automaticky omezeny.
+  Systémový administrátoři mohou editovat zprávy, které jsou zobrazeny omezeným
+  uživatelům namísto webových stránek, které požadovaly.

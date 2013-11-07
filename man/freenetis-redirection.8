@@ -1,0 +1,26 @@
+.\" Manpage for freenetis-redirection.
+.\" Contact ondrej.fibich@gmail.com.in to correct errors or typos.
+.TH man 8 "09 September 2013" "1.0" "freenetis-redirection man page"
+.SH NAME
+freenetis-redirection \- redirection IP policy demon for FreenetIS
+.SH SYNOPSIS
+freenetis-redirection action [log_file]
+.SH DESCRIPTION
+freenetis-redirection demon is a part of FreenetIS redirection and it serves for redirection IP policy of IS FreenetIS. This script should not be used directly.
+.SH OPTIONS
+The freenetis-redirection should not be run directly. It is commonly managed by an init.d script.
+
+It takes at least one argument action which may contains following values:
+
+	start    - creates firewall rules and ipsets for redirection
+    stop     - deletes firewall rules and ipsets for redirection
+    restart  - deletes and recreates firewall rules and ipsets for redirection
+    sync     - sync content of ipsets with FreenetIS
+    run      - complete redirection in endless loop
+    version  - print version
+    help     - prints help for redirection
+
+It can also take a second parameter that is a file that is used for logging.
+.SH AUTHOR
+Michal Kliment <kliment@freenetis.org>, 
+Roman Sevcik <sevcik.roman@slfree.net>

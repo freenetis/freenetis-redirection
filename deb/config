@@ -1,0 +1,22 @@
+#!/bin/sh
+
+set -e
+. /usr/share/debconf/confmodule
+
+CONFIGFILE=/etc/freenetis/freenetis-redirection.conf
+
+# Load config file, if it exists.
+if [ -e $CONFIGFILE ]; then
+    . $CONFIGFILE || true
+	db_get freenetis-redirection/hack_reload
+	if [ "$RET" = true ]; then
+		db_set freenetis-redirection/path_freenetis "$PATH_FN"
+	fi
+fi
+
+# h@ck for not reloading variables from config file (enabled again by postinst)
+db_set freenetis-redirection/hack_reload false
+
+# Ask questions.
+db_input critical freenetis-redirection/path_freenetis || true
+db_go || true

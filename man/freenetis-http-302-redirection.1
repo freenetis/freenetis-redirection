@@ -1,0 +1,22 @@
+.\" Manpage for freenetis-http-302-redirection.1.
+.\" Contact ondrej.fibich@gmail.com.in to correct errors or typos.
+.TH man 1 "09 September 2013" "1.0" "freenetis-http-302-redirection man page"
+.SH NAME
+freenetis-http-302-redirection \- HTTP redirector for FreenetIS redirection
+.SH SYNOPSIS
+freenetis-http-302-redirection port freenetis_path [log_file]
+.SH DESCRIPTION
+freenetis-http-302-redirection is a part of FreenetIS redirection it servers for listening on a port and redirect all its traffic to FreenetIS. This script should not be used directly.
+.SH OPTIONS
+The freenetis-http-302-redirection should not be run directly. It is commonly managed by an freenetis-redirection(8) demon.
+
+It takes following arguments:
+
+	port			Port number on which it listens for incoming HTTP connections
+
+	freenetis_path	URL to base path of FreenetIS
+
+	log_file		Optional file for logging
+
+.SH AUTHOR
+Ondrej Fibich <ondrej.fibich@gmail.com>
