@@ -85,6 +85,11 @@ cp ../../../freenetis-redirection.sh usr/sbin/freenetis-redirection
 cp ../../../freenetis-http-302-redirection.py usr/sbin/freenetis-http-302-redirection
 cp ../../../freenetis-redirection.conf etc/freenetis/
 
+# change ipset binary for jessie
+if [ "$DEBIAN" = jessie ]; then
+	sed -i -e 's/IPSET=\/usr\/sbin\/ipset/IPSET=\/usr\/ipset/g' usr/sbin/freenetis-redirection
+fi
+
 # count size
 SIZE=`du -s etc usr | cut -f1 | paste -sd+ | bc`
 
